@@ -1,0 +1,17 @@
+{% extends 'tasks/base.html' %}
+{% block content %}
+
+<div class="center-column">
+
+    <p>Are you sure "{{ item }}"?</p>
+
+    <a href="{% url 'list' %}">Cancel</a>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+        <input type="submit" name="Confirm">
+    </form>
+
+</div>
+
+{% endblock %}
